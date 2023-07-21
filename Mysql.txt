@@ -1,0 +1,99 @@
+create database kayahospital;
+use kayahospital;
+
+create table user(YetkiliTC varchar(30) primary key not null , Username varchar(20) not null , Password varchar(200) not null); 
+
+
+CREATE TABLE `kayahospital`.`doktorlar` (
+  `tc` INT NOT NULL,
+  `ad` VARCHAR(45) NULL,
+  `soyad` VARCHAR(45) NULL,
+  `cinsiyet` VARCHAR(45) NULL,
+  `dogumyer` VARCHAR(45) NULL,
+  `ddogumt` VARCHAR(45) NULL,
+  `telno` VARCHAR(45) NULL,
+  `sabittel` VARCHAR(45) NULL,
+  `mail` VARCHAR(45) NULL,
+  `poliklinik` VARCHAR(45) NULL,
+  `sifre` VARCHAR(200) NULL,
+  `kayityetkilisi` VARCHAR(45) NULL,
+  PRIMARY KEY (`tc`));
+
+
+CREATE TABLE `kayahospital`.`poliklinikler` (
+  `id` INT NOT NULL,
+  `pAd` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('1', 'Aile Hekimliği');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('2', 'Çocuk Sağlığı ve Hastalıklaır');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('3', 'İç Hastalıklar');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('4', 'Cildiye');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('5', 'Radyoloji');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('6', 'Psikolog');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('7', 'Psikiyatri');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('8', 'Nöroloji');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('9', 'Nefroloji');
+INSERT INTO `kayahospital`.`poliklinikler` (`id`, `pAd`) VALUES ('10', 'Göğüs Hastalıkları');
+
+
+
+CREATE TABLE `kayahospital`.`hastalar` (
+  `tc` VARCHAR(45) NOT NULL,
+  `ad` VARCHAR(45) NULL,
+  `soyad` VARCHAR(45) NULL,
+  `cinsiyet` VARCHAR(45) NULL,
+  `dogumyer` VARCHAR(45) NULL,
+  `dogumtarih` VARCHAR(45) NULL,
+  `anneadi` VARCHAR(45) NULL,
+  `annetel` VARCHAR(45) NULL,
+  `babaadi` VARCHAR(45) NULL,
+  `babatel` VARCHAR(45) NULL,
+  `hastatel` VARCHAR(45) NULL,
+  `hastamail` VARCHAR(45) NULL,
+  `hastaadres` VARCHAR(45) NULL,
+  `hastamesaj` VARCHAR(45) NULL,
+  `hastapol` VARCHAR(45) NULL,
+  `kayityetkilisi` VARCHAR(45) NULL,
+  PRIMARY KEY (`tc`));
+
+
+CREATE TABLE `kayahospital`.`randevular` (
+  `HastaTC` VARCHAR(45) NOT NULL,
+  `Poliklinik` VARCHAR(45) NULL,
+  `Doktor` VARCHAR(45) NULL,
+  `DoktorTC` VARCHAR(45) NULL,
+  `HastaMsg` VARCHAR(45) NULL,
+  `Tarih` VARCHAR(45) NULL,
+  `RandevuSaati` VARCHAR(45) NULL,
+  `KayitYetkilisi` VARCHAR(45) NULL,
+  PRIMARY KEY (`HastaTC`));
+
+
+CREATE TABLE `kayahospital`.`receteler` (
+  `ReceteNo` INT NOT NULL,
+  `HastaTC` VARCHAR(45) NULL,
+  `HastaAd` VARCHAR(45) NULL,
+  `HastaSoyad` VARCHAR(45) NULL,
+  `ReceteTarih` VARCHAR(45) NULL,
+  `İlaclar` VARCHAR(200) NULL,
+  `K_Talimat` VARCHAR(200) NULL,
+  `DoktorTC` VARCHAR(45) NULL,
+  PRIMARY KEY (`ReceteNo`));
+
+ALTER TABLE `kayahospital`.`user` 
+ADD COLUMN `Email` VARCHAR(45) NULL AFTER `Password`;
+
+
+CREATE TABLE duyurular1 ( duyuruid INT PRIMARY KEY AUTO_INCREMENT,DuyuruY varchar(45),   duyurumesajı varchar(500)  )
+
+
+CREATE TABLE `kayahospital`.`onaykod` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `Onaykod` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+
+
+
