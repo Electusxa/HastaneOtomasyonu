@@ -48,8 +48,8 @@ CREATE TABLE `doktorlar` (
 
 INSERT INTO `doktorlar` (`tc`, `Ad`, `Soyad`, `cinsiyet`, `dogumyer`, `ddogumt`, `telno`, `sabittel`, `mail`, `poliklinik`, `sifre`, `kayityetkilisi`) VALUES
 (393, 'Aasv', 'polat', 'Kadın', 'Sivas', '21.05.2023 16:09:20', '(666) 546-4564', '(654) 632-4341', 'kjasd', 'Aile Hekimliği', 'YEpLCwXyKZM=', 'Ali'),
-(12345, 'Ali Fırat', 'Polat', 'Erkek ', 'İstanbul', '23.04.1981 00:54:20', '05447245771', '02167245771', 'afp992@gmail.com', 'Aile Hekimliği', 'AhmetStone1', 'Ali'),
-(123123, 'asdasd', 'asdasd', 'Erkek ', 'Sivas', '26.04.2023 20:54:04', '(544) 724-5771', '(546) 500-2613', 'easd123', 'Aile Hekimliği', '1234', 'Ali'),
+(12345, 'Ali', 'Kaya', 'Erkek ', 'İstanbul', '23.04.1981 00:54:20', '05447245771', '02165555555', 'afp992@gmail.com', 'Aile Hekimliği', 'AhmetStone1', 'Ali'),
+(123123, 'asdasd', 'asdasd', 'Erkek ', 'Sivas', '26.04.2023 20:54:04', '(544) 724-5771', '(555) 555-5555', 'easd123', 'Aile Hekimliği', '1234', 'Ali'),
 (1231235, 'asdv', 'asdaew', 'Erkek ', 'Sivas', '15.05.2023 21:06:07', '(555) 555-5555', '(444) 444-4444', '1231', 'Aile Hekimliği', 'eBmjdjsG/kw=', 'Ali');
 
 -- --------------------------------------------------------
@@ -167,7 +167,7 @@ CREATE TABLE `randevular` (
 --
 
 INSERT INTO `randevular` (`HastaTC`, `Poliklinik`, `Doktor`, `DoktorTC`, `HastaMsg`, `Tarih`, `RandevuSaati`, `KayitYetkilisi`) VALUES
-('123214', 'Aile Hekimliği', 'Ali Fırat Polat', NULL, 'Sa', '22 Mayıs 2023 Pazartesi', '9.30', 'Ali');
+('123214', 'Aile Hekimliği', 'Ali Kaya', NULL, 'Sa', '22 Mayıs 2023 Pazartesi', '9.30', 'Ali');
 
 -- --------------------------------------------------------
 
