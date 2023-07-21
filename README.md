@@ -1,0 +1,2 @@
+# HastaneYonetimProg
+C# İLE YAPILMIŞ BİR HASTANE YÖNETİM PROGRAMI
