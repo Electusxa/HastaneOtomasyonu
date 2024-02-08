@@ -9,5 +9,6 @@ Selam dostlar c# ile yapmış olduğum bir proje gayet detaylı içinde her teld
 Youtube video çekme vesaire olursa lütfen bana ulaşın ya da kendinizin yapmadığını söyleyin rica ediyorum. Lütfen Alttaki Satırları  okuyun
 
 Admin Kullanıcı Adı ve Şifresi Ali / 123456
+Şu Satırları Değiştirin!!!
 Program.cs  Satır  12
 SifreYenile.cs Satır 126 Satır 131 Satır 159 Satır 164
